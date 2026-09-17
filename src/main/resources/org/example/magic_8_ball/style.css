@@ -1,0 +1,65 @@
+.root {
+    -fx-background-color: linear-gradient(
+            to bottom,
+            #e3f2fd,
+            #ffffff
+    );
+}
+
+.name-label {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1565c0;
+}
+
+.title-label {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.answer-label {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.ask-button {
+    -fx-background-color: linear-gradient(
+            to bottom,
+            #42a5f5,
+            #1565c0
+    );
+
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 9px;
+    -fx-padding: 9px 22px;
+    -fx-cursor: hand;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0, 0, 0, 0.35),
+            7,
+            0.2,
+            0,
+            3
+    );
+}
+
+.ask-button:hover {
+    -fx-background-color: #0d47a1;
+}
+
+.ask-button:pressed {
+    -fx-translate-y: 2px;
+}
+
+.instruction-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #666666;
+}

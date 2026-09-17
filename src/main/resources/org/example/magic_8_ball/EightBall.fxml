@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.magic_8_ball.EightBallController"
+      stylesheets="@style.css"
+      alignment="CENTER"
+      spacing="20.0"
+      prefHeight="550.0"
+      prefWidth="500.0">
+
+    <padding>
+        <Insets top="25.0"
+                right="30.0"
+                bottom="25.0"
+                left="30.0"/>
+    </padding>
+
+    <children>
+
+        <!-- Rotated and CSS-styled name -->
+        <Label text="ASK A QUESTION ABOUT YOUR FUTURE"
+
+               styleClass="name-label"/>
+
+        <!-- Application title -->
+        <Label text="Magic 8 Ball"
+               styleClass="title-label"/>
+
+        <!-- User enters a question here -->
+        <TextField fx:id="questionField"
+                   promptText="Enter your question..."
+                   maxWidth="320.0"
+                   onAction="#askEightBall"/>
+
+        <!-- Movable Magic 8 Ball -->
+        <StackPane fx:id="eightBall"
+                   prefHeight="250.0"
+                   prefWidth="250.0"
+                   maxHeight="250.0"
+                   maxWidth="250.0">
+
+            <children>
+
+                <!-- Outer black ball -->
+                <Circle radius="115.0"
+                        fill="#111111"
+                        stroke="#444444"
+                        strokeWidth="4.0"/>
+
+                <!-- Inner answer area -->
+                <Circle radius="67.0"
+                        fill="#132A5E"
+                        stroke="#4FC3F7"
+                        strokeWidth="3.0"/>
+
+                <!-- Random answer appears here -->
+                <Label fx:id="answerLabel"
+                       text="Ask me!"
+                       maxWidth="105.0"
+                       wrapText="true"
+                       textAlignment="CENTER"
+                       alignment="CENTER"
+                       styleClass="answer-label"/>
+
+            </children>
+        </StackPane>
+
+        <!-- Generates a random answer -->
+        <Button text="Ask the 8 Ball"
+                onAction="#askEightBall"
+                mnemonicParsing="false"
+                styleClass="ask-button"/>
+
+        <Label text="You can also drag the 8 Ball."
+               styleClass="instruction-label"/>
+
+    </children>
+</VBox>
