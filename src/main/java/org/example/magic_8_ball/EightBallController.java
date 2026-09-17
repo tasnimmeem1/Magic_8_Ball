@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
 
+//@Author- Shahla Tasnim Meem
 public class EightBallController {
 
     // Possible answers from the Magic 8 Ball
